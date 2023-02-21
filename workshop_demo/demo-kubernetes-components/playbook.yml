@@ -3,13 +3,13 @@
   hosts: localhost
   tasks: 
    - name: create mongo secret
-     command:  kubectl apply -f /home/osboxes/workshop_demo/demo-kubernetes-components/mongo-secret.yaml
+     command:  kubectl apply -f /home/osboxes/workshop/workshop_demo/demo-kubernetes-components/mongo-secret.yaml
    - name: deploy mongodb database 
-     command: kubectl apply -f /home/osboxes/workshop_demo/demo-kubernetes-components/mongo.yaml
+     command: kubectl apply -f /home/osboxes/workshop/workshop_demo/demo-kubernetes-components/mongo.yaml
    - name: create mongoexpress configmap
-     command: kubectl apply -f /home/osboxes/workshop_demo/demo-kubernetes-components/mongo-configmap.yaml
+     command: kubectl apply -f /home/osboxes/workshop/workshop_demo/demo-kubernetes-components/mongo-configmap.yaml
    - name: deploy mongoexpress webserver
-     command: kubectl apply -f /home/osboxes/workshop_demo/demo-kubernetes-components/mongo-express.yaml
+     command: kubectl apply -f /home/osboxes/workshop/workshop_demo/demo-kubernetes-components/mongo-express.yaml
    - name: connect to mongo-express webserver
      command: minikube service mongo-express-service
 
